@@ -1,0 +1,42 @@
+<style>
+  table, th, td {
+    border: 1px solid;
+  }
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        Id
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Price
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Brand
+      </th>
+      <th>
+        Quantity
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let product of productService.Products | searchfilter: productService.searchValue">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.description}}</td>
+      <td>{{product.brand}}</td>
+      <td>{{product.quantity}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
